@@ -2,7 +2,7 @@
     <div class="container text-white d-flex">
         <div>
             <div class="pe-3 pt-5">
-                <h2>DC COMICS</h2>
+                <h4>DC COMICS</h4>
                 <ul>
                     @foreach ($headerList as $item)
                         <li><a class="text-white opacity-50" href="#">{{$item['title']}}</a></li>
@@ -10,7 +10,7 @@
                 </ul>
             </div>
             <div>
-                <h2>SHOP</h2>
+                <h4>SHOP</h4>
                 <ul>
                     <li><a class="text-white opacity-50" href="#">Shop Dc</a></li>
                     <li><a class="text-white opacity-50" href="#">Shop Dc Collectibles</a></li>
@@ -19,7 +19,7 @@
         </div>
         
         <div class="pe-3 pt-5">
-            <h2>DC</h2>
+            <h4>DC</h4>
             <ul>
                 @foreach ($footerList as $item)
                     <li><a class="text-white opacity-50" href="#">{{$item}}</a></li>
@@ -27,7 +27,7 @@
             </ul>
         </div>
         <div class="pt-5">
-            <h2 class="ps-2">SITES</h2>
+            <h4 class="ps-2">SITES</h4>
             <ul>
                 <li><a class="text-white opacity-50" href="#">DC</a></li>
                 <li><a class="text-white opacity-50" href="#">MAD Magazine</a></li>

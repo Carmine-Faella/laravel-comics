@@ -9,9 +9,12 @@
 
     </div>
 
-    <section id="#img_cnt" class="bg-black">
+    <section id="#img_cnt" class="bg-black position-relative">
 
         <div class="container">
+
+            <span class="badge text-bg-primary p-3 current-series">CURRENT SERIES</span>
+
             <div class="img_wrapper py-5">
                 @foreach ($comicsList as $comic)
 
@@ -33,28 +36,13 @@
         <div class="container d-flex justify-content-center">
 
             <div class='cnt'>
-
                 <div>
-                    <div class='bar_image'>
-                        <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}">
-                        <p>DIGITAL COMICS</p>
-                    </div>
-                    <div class='bar_image'>
-                        <img src="{{Vite::asset('resources/img/buy-comics-merchandise.png')}}">
-                        <p>DC MERCHANDISE</p>
-                    </div>
-                    <div class='bar_image'>
-                        <img src="{{Vite::asset('resources/img/buy-comics-shop-locator.png')}}">
-                        <p>SUBSCRIPTION</p>
-                    </div>
-                    <div class='bar_image'>
-                        <img src="{{Vite::asset('resources/img/buy-comics-subscriptions.png')}}">
-                        <p>COMIC SHOP LOCATOR</p>
-                    </div>
-                    <div class='bar_image'>
-                        <img src="{{Vite::asset('resources/img/buy-dc-power-visa.svg')}}">
-                        <p>DC POWER VISA</p>
-                    </div>   
+                    @foreach ($barList as $list)
+                        <div class='bar_image'>
+                                <img src="{{Vite::asset($list['href'])}}" alt="$list['title']">
+                                <p class="text-white">{{$list['title']}}</p>
+                        </div>
+                    @endforeach 
                 </div>
 
             </div>

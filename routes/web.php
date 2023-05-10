@@ -17,7 +17,8 @@ Route::get('/', function () {
     $comicsList = config('comics');
     $headerList = config('header');
     $footerList = config('footer');
-    return view('Home', compact('comicsList','headerList','footerList'));
+    $barList = config('barList');
+    return view('Home', compact('comicsList','headerList','footerList','barList'));
 })->name('home');
 
 Route::get('/Single', function () {
