@@ -22,8 +22,8 @@
                 @endforeach
             </div>
         </div>
-
-        
-
+        <div class="text-center pb-5">
+            <button type="button" class="btn btn-primary px-4">LOAD MORE</button>
+        </div>
     </section>
 @endsection
