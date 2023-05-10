@@ -14,15 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
     $comicsList = config('comics');
     $headerList = config('header');
-
-    return view('Home', compact('comicsList','headerList'));
+    $footerList = config('footer');
+    return view('Home', compact('comicsList','headerList','footerList'));
 })->name('home');
 
 Route::get('/Single', function () {
-    return view('Single');
+    $comicsList = config('comics');
+    $headerList = config('header');
+    $footerList = config('footer');
+    return view('Single',compact('comicsList','headerList','footerList'));
 })->name('single');
+
+
 
 

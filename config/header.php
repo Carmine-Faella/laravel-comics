@@ -1,7 +1,7 @@
 <?php
 
 return[
-    'option' => [
+    [
         "title"=>"Characters",
         "href"=>"/"
     ],
@@ -41,5 +41,4 @@ return[
         "title"=>"Shop",
         "href"=>"#"
     ]
-
 ];
