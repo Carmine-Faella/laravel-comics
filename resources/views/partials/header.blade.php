@@ -7,7 +7,7 @@
             </div>
             <ul class="list-nav list-unstyled">
                 @foreach ($headerList as $item)
-                    <li class="d-inline-block pe-2"><a class="text-decoration-none text-black" href="{{$item['href']}}">{{$item['title']}}</a></li>
+                    <li class="d-inline-block pe-3"><a class="text-decoration-none text-black" href="{{$item['href']}}">{{$item['title']}}</a></li>
                 @endforeach
             </ul>
             <div>
