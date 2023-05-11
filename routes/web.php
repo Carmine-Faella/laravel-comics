@@ -15,21 +15,36 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $comicsList = config('comics');
-    $headerList = config('header');
-    $footerList = config('footer');
-    $barList = config('barList');
+    $db = config('comics.db');
+    $topbar = config('comics.topbar');
+    $mainbar = config('comics.mainbar');
+    $footbar = config('comics.footbar');
 
-    return view('Home', compact('comicsList','headerList','footerList','barList'));
+    $data = [
+        'db'=>$db,
+        'topbar'=>$topbar,
+        'mainbar'=>$mainbar,
+        'footbar'=>$footbar
+    ];
+
+    return view('Home', $data);
 })->name('home');
 
 Route::get('/Single', function () {
 
-    $comicsList = config('comics');
-    $headerList = config('header');
-    $footerList = config('footer');
+    $db = config('comics.db');
+    $topbar = config('comics.topbar');
+    $mainbar = config('comics.mainbar');
+    $footbar = config('comics.footbar');
+
+    $data = [
+        'db'=>$db,
+        'topbar'=>$topbar,
+        'mainbar'=>$mainbar,
+        'footbar'=>$footbar
+    ];
     
-    return view('Single',compact('comicsList','headerList','footerList'));
+    return view('Single',$data);
 })->name('single');
 
 

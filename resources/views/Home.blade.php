@@ -16,11 +16,11 @@
             <span class="badge text-bg-primary p-3 current-series">CURRENT SERIES</span>
 
             <div class="img_wrapper py-5">
-                @foreach ($comicsList as $comic)
+                @foreach ($db as $item)
 
                     <div class="img_wrap pt-2">
-                        <a href="{{$comic['href']}}"><img src="{{$comic['thumb']}}" alt="{{$comic['title']}}"></a>
-                        <div class="text-center"><a class="text-white text-decoration-none" href="{{$comic['href']}}">{{$comic['title']}}</a></div>
+                        <a href="{{$item['href']}}"><img src="{{$item['thumb']}}" alt="{{$item['title']}}"></a>
+                        <div class="text-center"><a class="text-white text-decoration-none" href="{{$item['href']}}">{{$item['title']}}</a></div>
                     </div>
                     
                 @endforeach
@@ -37,14 +37,16 @@
 
             <div class='cnt'>
                 <div class="d-flex align-items-center">
-                    @foreach ($barList as $list)
+                    
                         <div class='bar_image d-flex  align-items-center'>
-                            <div>
-                                <img src="{{Vite::asset($list['href'])}}" alt="$list['title']">
-                            </div>
-                            <p class="text-white">{{$list['title']}}</p>
+                            @foreach ($mainbar as $item)
+                                <div>
+                                    <img src="{{Vite::asset($item['image'])}}" alt="">
+                                </div>
+                                <p class="text-white">{{$item['title']}}</p>
+                            @endforeach
                         </div>
-                    @endforeach 
+                    
                 </div>
 
             </div>

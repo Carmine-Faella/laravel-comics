@@ -24,7 +24,7 @@
                 <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="logo Dc">
             </div>
             <ul>
-                @foreach ($headerList as $item)
+                @foreach ($topbar as $item)
                     <li class="d-inline-block pt-3 pe-3"><a class="text-decoration-none text-black" href="{{$item['href']}}">{{$item['title']}}</a></li>
                 @endforeach
             </ul>
