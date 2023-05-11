@@ -10,14 +10,42 @@
     }
 }
 
-.img_wrap{
-    width: calc(100%/6);
-    height: 200px;
+.topbar{
+    font-size: 10px;
+
+    button{
+        padding: 0;
+        font-size: 10px;
+    }
+}
+
+.logo{
+    height: 15vh;
 
     img{
         object-fit: contain;
         width: 100%;
         height: 100%;
+        padding: 1rem;
+    }
+}
+
+nav{
+    height: 15vh;
+    input{
+        width: 150px;
+    }
+}
+
+.img_wrap{
+    width: calc(100%/6);
+    height: calc(100%/2);
+
+    img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
     }
 }
 
@@ -36,9 +64,22 @@
         padding-top: 1.5rem;
     }
 
-    img{
-        width: 40px;
+    div{
+        width: 50px;
         height: 50px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.cnt{
+    p{
+        font-size: 12px;
+        padding-left: 0.5rem;
     }
 }
 
@@ -64,11 +105,22 @@ ul{
     padding-left: 5rem;
 }
 
-
+.footbar, .img_cnt{
+    background-color: rgb(28,28,28);
+}
 
 .current-series{
     position: absolute;
     top: -20px;
+}
+
+.line{
+    height: 10vh;
+}
+
+.cnt_single{
+    width: 60%;
+    margin: auto;
 }
 
 

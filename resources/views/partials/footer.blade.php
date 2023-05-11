@@ -40,9 +40,9 @@
             <img src="{{Vite::asset('resources/img/dc-logo-bg.png')}}" alt="logo Dc">
         </div>
     </div>
-    <div class="footbar bg-black py-y5">
+    <div class="footbar py-y5">
 
-        <div class="container py-5 d-flex justify-content-between">
+        <div class="container py-4 d-flex justify-content-between">
             <button type="button" class="btn btn-outline-primary text-white" disabled>SIGN UP NOW!</button>
             <div class="d-flex align-items-center">
                 <div class="text-primary pe-3">FOLLOW US</div>

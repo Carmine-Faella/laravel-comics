@@ -9,7 +9,7 @@
 
     </div>
 
-    <section id="#img_cnt" class="bg-black position-relative">
+    <section class="position-relative img_cnt">
 
         <div class="container">
 
@@ -18,7 +18,7 @@
             <div class="img_wrapper py-5">
                 @foreach ($comicsList as $comic)
 
-                    <div class="img_wrap py-5">
+                    <div class="img_wrap pt-2">
                         <a href="{{$comic['href']}}"><img src="{{$comic['thumb']}}" alt="{{$comic['title']}}"></a>
                         <div class="text-center"><a class="text-white text-decoration-none" href="{{$comic['href']}}">{{$comic['title']}}</a></div>
                     </div>
@@ -36,11 +36,13 @@
         <div class="container d-flex justify-content-center">
 
             <div class='cnt'>
-                <div>
+                <div class="d-flex align-items-center">
                     @foreach ($barList as $list)
-                        <div class='bar_image'>
+                        <div class='bar_image d-flex  align-items-center'>
+                            <div>
                                 <img src="{{Vite::asset($list['href'])}}" alt="$list['title']">
-                                <p class="text-white">{{$list['title']}}</p>
+                            </div>
+                            <p class="text-white">{{$list['title']}}</p>
                         </div>
                     @endforeach 
                 </div>
